@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-tint": "#a6cfc6",
+                  "on-secondary-container": "#88c4e0",
+                  "on-secondary-fixed-variant": "#004d64",
+                  "surface-container-low": "#141a32",
+                  "surface-container": "#181e36",
+                  "on-primary": "#0e3631",
+                  "on-tertiary-container": "#624400",
+                  "on-secondary-fixed": "#001f2a",
+                  "tertiary-container": "#f1ad00",
+                  "on-secondary": "#003546",
+                  "primary-fixed": "#c2ebe2",
+                  "outline-variant": "#414846",
+                  "inverse-on-surface": "#292f48",
+                  "tertiary-fixed-dim": "#ffba27",
+                  "on-error-container": "#ffdad6",
+                  "secondary-fixed": "#bde9ff",
+                  "primary-container": "#99c1b9",
+                  "secondary-container": "#01526a",
+                  "tertiary-fixed": "#ffdea9",
+                  "primary-fixed-dim": "#a6cfc6",
+                  "error-container": "#93000a",
+                  "error": "#ffb4ab",
+                  "on-primary-container": "#2a504a",
+                  "on-error": "#690005",
+                  "on-background": "#dce1ff",
+                  "tertiary": "#ffcd76",
+                  "on-tertiary-fixed-variant": "#5e4100",
+                  "surface-dim": "#0b1229",
+                  "inverse-surface": "#dce1ff",
+                  "secondary-fixed-dim": "#93cfeb",
+                  "primary": "#b4ddd5",
+                  "surface": "#0b1229",
+                  "surface-container-high": "#222941",
+                  "on-tertiary-fixed": "#271900",
+                  "surface-container-lowest": "#060d24",
+                  "on-tertiary": "#422c00",
+                  "secondary": "#93cfeb",
+                  "on-primary-fixed": "#00201c",
+                  "on-surface-variant": "#c0c8c5",
+                  "surface-bright": "#323851",
+                  "background": "#0b1229",
+                  "outline": "#8b9290",
+                  "inverse-primary": "#3f655f",
+                  "surface-variant": "#2d344c",
+                  "on-primary-fixed-variant": "#274d47",
+                  "surface-container-highest": "#2d344c",
+                  "on-surface": "#dce1ff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "1rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      background: rgba(45, 52, 76, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    body {
+      background-color: #0b1229;
+      color: #dce1ff;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-[#0b1229]/80 backdrop-blur-xl text-emerald-200 font-['Manrope'] tracking-tight docked full-width top-0 z-50 bg-[#141a32] shadow-[0_20px_50px_rgba(220,225,255,0.05)] flex justify-between items-center w-full px-8 h-20 sticky">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#b4ddd5] to-[#99c1b9]">Lumina Campus</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#b4ddd5] border-b-2 border-[#b4ddd5] pb-1 font-medium" href="#">Courses</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] transition-colors font-medium" href="#">Library</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] transition-colors font-medium" href="#">Community</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] transition-colors font-medium" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-white/5 rounded-lg transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-outline-variant/20 border overflow-hidden">
+<img alt="User profile" data-alt="close-up portrait of a young student with a calm expression, soft cinematic indoor lighting with blue and teal ambient tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk2JpOEECxITK3AtoWklgqPuqmum44NS25XLdk8gRN8LqdqvpjPhOZ21NyZy-SRofwC-d8EyF4OiB7jxRTaCX7Eknt-KRyfAvU_LF5nlKVvqN3HWL3kwjq8CR-LohNzRGOqCoK9TPYwLExRU8MqdhP7v--vWWZ6OazaZZ6EYWxL7NnYEtgejLiv-25nHpOwroH5dBtm81v09jmzdPVxSt13RKGlj4wIY7YZdedPkajifFWTayx1OWVlkIhdoMk_uJGJGoHtEnv6Y2B"/>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- Shared Component: SideNavBar -->
+<aside class="hidden md:flex bg-[#141a32] font-['Inter'] text-sm font-medium docked left-0 h-[calc(100vh-5rem)] w-64 bg-[#0b1229] flex-col p-4 space-y-2 sticky top-20">
+<div class="flex items-center gap-3 px-3 py-4 mb-4">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-[#93cfeb]">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<div>
+<p class="text-on-surface font-semibold">Mindful Learning</p>
+<p class="text-on-surface-variant text-xs">Module 4: Resilience</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#c0c8c5] hover:bg-[#222941]/50 hover:translate-x-1 transition-transform duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#c0c8c5] hover:bg-[#222941]/50 hover:translate-x-1 transition-transform duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+<span>Daily Calm</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-[#222941] text-[#b4ddd5] rounded-xl hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Learning Path</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#c0c8c5] hover:bg-[#222941]/50 hover:translate-x-1 transition-transform duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span>Journal</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#c0c8c5] hover:bg-[#222941]/50 hover:translate-x-1 transition-transform duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span>Insights</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<div class="bg-surface-container-high rounded-xl p-4">
+<p class="text-xs text-on-surface-variant mb-2">PRO ACCESS</p>
+<p class="text-on-surface font-medium mb-3 leading-tight">Unlock premium mental health modules</p>
+<button class="w-full py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-lg text-xs font-bold active:scale-95 transition-all">
+            Upgrade to Pro
+          </button>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 text-[#c0c8c5] hover:bg-[#222941]/50 hover:translate-x-1 transition-transform duration-300 rounded-xl" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Help Center</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-6 md:p-10 max-w-6xl mx-auto space-y-8">
+<!-- Video Player Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="play_circle">play_circle</span>
+<h2 class="text-xl font-bold text-on-surface tracking-tight">Physiology of Stress: Box Breathing</h2>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-surface-container-highest text-secondary rounded-full">Module 4 • Lesson 2</span>
+</div>
+<div class="relative aspect-video rounded-2xl overflow-hidden bg-surface-container-lowest shadow-2xl group">
+<img alt="Video cover" class="w-full h-full object-cover opacity-60" data-alt="calm woman practicing mindful meditation in a dimly lit studio with soft blue and green backlighting, professional cinematic depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCbrkOFy4rcfMKTqSQcQ4Tzjip9LFmd1wZmM-hLNRH3nKLoYHa8mLEwaV-cQ78OMGzThxsrurfh07HWJ1VTUScCots-PDF_qydNBMXCN7wLq8AYwO6I57q4x-9XyXQ0JP4HPSzGrkrKevHET33vVbQ_Ynz4xdjxZj6SCholhY4W0kCuwcxFHWz9-hQ0IS_NJl-tVtB3z9qsApNQeILbG5py3P5zi4zZmwfML_GdwOIy6L6SoKSNmqDaZ8GqWKQQiQ-_y6ysHUFqft"/>
+<!-- Minimal Video Controls Overlay -->
+<div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-white/20 rounded-full mb-6 relative overflow-hidden cursor-pointer">
+<div class="absolute top-0 left-0 h-full w-[65%] bg-primary shadow-[0_0_12px_rgba(180,221,213,0.5)]"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-6">
+<button class="text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</button>
+<div class="flex items-center gap-4 text-white/90">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="volume_up">volume_up</span></button>
+<span class="text-sm font-medium">12:44 / 20:00</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-white hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+<button class="text-white hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="fullscreen">fullscreen</span></button>
+</div>
+</div>
+</div>
+<!-- Play Center Indicator (Visual Only) -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center text-white scale-100 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-5xl translate-x-1" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Knowledge Check Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<div class="glass-panel rounded-2xl p-8 border border-white/5 relative overflow-hidden">
+<!-- Decorative Light Glow -->
+<div class="absolute -top-24 -left-24 w-48 h-48 bg-primary/10 blur-[80px] rounded-full"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+</div>
+<h3 class="text-2xl font-bold tracking-tight text-white">Knowledge Check</h3>
+</div>
+<div class="space-y-8">
+<!-- Question 1 -->
+<div class="space-y-4">
+<p class="text-on-surface font-medium text-lg leading-relaxed">1. What is the primary physiological benefit of box breathing mentioned in the module?</p>
+<div class="grid grid-cols-1 gap-3">
+<button class="flex items-center justify-between p-4 bg-surface-container-high/40 hover:bg-surface-container-high border border-transparent hover:border-secondary/30 rounded-xl transition-all text-left group">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">It activates the sympathetic nervous system for energy.</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline transition-colors"></div>
+</button>
+<button class="flex items-center justify-between p-4 bg-secondary/10 border border-secondary/30 rounded-xl transition-all text-left group">
+<span class="text-secondary font-medium">It stimulates the vagus nerve to calm the nervous system.</span>
+<div class="w-5 h-5 rounded-full border-2 border-secondary bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-secondary" data-icon="check" style="font-variation-settings: 'wght' 700">check</span>
+</div>
+</button>
+<button class="flex items-center justify-between p-4 bg-surface-container-high/40 hover:bg-surface-container-high border border-transparent hover:border-secondary/30 rounded-xl transition-all text-left group">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">It increases immediate cortisol production.</span>
+<div class="w-5 h-5 rounded-full border-2 border-outline transition-colors"></div>
+</button>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="space-y-4">
+<p class="text-on-surface font-medium text-lg leading-relaxed">2. How many seconds per phase (inhale, hold, exhale, hold) is standard for this technique?</p>
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-3 rounded-xl bg-surface-container-high/40 border border-transparent hover:border-primary/50 text-on-surface-variant hover:text-primary transition-all">2 Seconds</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-high/40 border border-transparent hover:border-primary/50 text-on-surface-variant hover:text-primary transition-all">4 Seconds</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-high/40 border border-transparent hover:border-primary/50 text-on-surface-variant hover:text-primary transition-all">8 Seconds</button>
+<button class="px-6 py-3 rounded-xl bg-surface-container-high/40 border border-transparent hover:border-primary/50 text-on-surface-variant hover:text-primary transition-all">Variable</button>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-white/5 flex justify-end">
+<button class="px-8 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg shadow-primary/10 active:scale-95 transition-all">
+                  Submit Answers
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container-low rounded-2xl p-6 border border-white/5">
+<h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-4">Instructor Notes</h4>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-lowest rounded-xl">
+<p class="text-sm text-on-surface italic leading-relaxed">"Remember that consistency is more important than duration. Even 2 minutes of box breathing can reset your amygdala's response to academic stress."</p>
+<p class="text-xs text-secondary mt-3 font-medium">— Dr. Aris Thorne</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 border border-white/5 overflow-hidden relative">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary/20 text-6xl" data-icon="lightbulb">lightbulb</span>
+</div>
+<h4 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-4">Up Next</h4>
+<div class="flex gap-4 items-center group cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Next video" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="abstract peaceful water ripples in moonlight with deep blue and shimmering silver tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMeI4OMXTdv_0Tiwitn9Q4cfhoEJEIr3pt9av-TZRUBsVELAtarPoPF5HTE3qqR8FO2UUuxsToPRaBZe5nDh91M6GP56bHUKBN0RDcygPtW-rPlZXjxU-TD9aA3Hq0Oa-L8N02u3u8e6JjzTquOl_MEB8H1Fdd8toXx_14liD-8RuLs8f7QtF8dlNVlEZhf1AEa71UlcGHP1dFz7MefFEPhEUtHqX0YfEOvMPHaO65bgpJucw99DUW-oUBJi0nGRW0BEckXuBN8Cj_"/>
+</div>
+<div>
+<p class="text-on-surface font-semibold text-sm group-hover:text-primary transition-colors">Lesson 3: Cognitive Reframing</p>
+<p class="text-on-surface-variant text-xs">15 minutes • Video &amp; Exercise</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Bottom Navigation for Mobile -->
+<footer class="md:hidden fixed bottom-0 left-0 right-0 bg-[#0b1229]/95 backdrop-blur-lg border-t border-white/5 px-6 py-3 z-50 flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-[#c0c8c5]">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px]">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#b4ddd5]">
+<span class="material-symbols-outlined" data-icon="auto_stories" data-weight="fill">auto_stories</span>
+<span class="text-[10px]">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#c0c8c5]">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+<span class="text-[10px]">Zen</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#c0c8c5]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Me</span>
+</button>
+</footer>
+</body></html>

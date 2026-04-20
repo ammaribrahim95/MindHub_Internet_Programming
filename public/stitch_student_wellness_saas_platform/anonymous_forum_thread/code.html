@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminary Care | Safe Space Discussion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#f1ad00",
+                        "secondary-fixed": "#bde9ff",
+                        "background": "#0b1229",
+                        "surface-bright": "#323851",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#ffdea9",
+                        "outline": "#8b9290",
+                        "inverse-primary": "#3f655f",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "surface-dim": "#0b1229",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffcd76",
+                        "inverse-on-surface": "#292f48",
+                        "primary-fixed": "#c2ebe2",
+                        "primary-fixed-dim": "#a6cfc6",
+                        "secondary-container": "#01526a",
+                        "on-secondary-fixed": "#001f2a",
+                        "primary": "#b4ddd5",
+                        "inverse-surface": "#dce1ff",
+                        "surface-tint": "#a6cfc6",
+                        "secondary": "#93cfeb",
+                        "on-tertiary-fixed": "#271900",
+                        "surface-variant": "#2d344c",
+                        "surface-container-low": "#141a32",
+                        "on-tertiary": "#422c00",
+                        "surface-container-lowest": "#060d24",
+                        "on-secondary-container": "#88c4e0",
+                        "on-secondary": "#003546",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#414846",
+                        "on-tertiary-container": "#624400",
+                        "on-surface-variant": "#c0c8c5",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#004d64",
+                        "on-background": "#dce1ff",
+                        "on-surface": "#dce1ff",
+                        "on-primary-container": "#2a504a",
+                        "surface-container-high": "#222941",
+                        "surface": "#0b1229",
+                        "primary-container": "#99c1b9",
+                        "on-primary-fixed": "#00201c",
+                        "on-primary": "#0e3631",
+                        "tertiary-fixed-dim": "#ffba27",
+                        "surface-container": "#181e36",
+                        "on-primary-fixed-variant": "#274d47",
+                        "surface-container-highest": "#2d344c",
+                        "secondary-fixed-dim": "#93cfeb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #0b1229;
+            color: #dce1ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 76, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(147, 207, 235, 0.1);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b1229]/80 backdrop-blur-lg shadow-[0_20px_50px_rgba(220,225,255,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold text-[#dce1ff] tracking-tighter font-['Manrope']">Luminary Care</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#99C1B9] border-b-2 border-[#99C1B9] pb-1 font-['Manrope'] font-bold tracking-tight text-lg" href="#">Forums</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] transition-colors duration-300 font-['Manrope'] font-bold tracking-tight text-lg" href="#">Resources</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] transition-colors duration-300 font-['Manrope'] font-bold tracking-tight text-lg" href="#">Crisis Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#99C1B9] hover:bg-[#222941]/50 transition-colors duration-300 rounded-lg">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#99C1B9] hover:bg-[#222941]/50 transition-colors duration-300 rounded-lg">
+<span class="material-symbols-outlined" data-icon="shield_person">shield_person</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img alt="Anonymous User Avatar" data-alt="abstract minimalist profile placeholder with soft blue and navy geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWnKyYzvwDOr5oUUUG7BLGu9dpzLau7RuDk1pnjIKd6DNQ7HAo9MjTA0nMyV4Ydzfepu-6jFfdwMNRzN3MD375t_tqjQcTKlAa-bRZTtUISpKzN3nO_JCP06Yc6SdPmSUA6RrwJuR8yPWW0eK7iJKCorSONsazH093Nr7LROxbI5SLJ290QeidN6XE82nDihpAkYs6tByZ3fhrfV9dhn4hSuhCb-jeE8KhpZe4Vb6Io5Rx4JZkS3OGUS7NZlhjANerBGOZjReSehA8"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex h-screen pt-[72px]">
+<!-- Side Navigation Bar -->
+<aside class="hidden md:flex flex-col h-full w-72 bg-[#0b1229] border-r border-surface-container-low p-4 z-40">
+<div class="mb-8 px-4">
+<h2 class="font-['Manrope'] text-2xl font-black text-[#dce1ff]">Safe Space</h2>
+<p class="text-on-surface-variant text-xs opacity-70">Anonymous Community</p>
+</div>
+<nav class="space-y-1 flex-1">
+<a class="flex items-center gap-3 bg-[#222941] text-[#93cfeb] rounded-xl px-4 py-3 transition-all duration-300 translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-['Inter'] text-sm font-medium">All Discussions</span>
+</a>
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-['Inter'] text-sm font-medium">General Anxiety</span>
+</a>
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<span class="font-['Inter'] text-sm font-medium">Mood Disorders</span>
+</a>
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+<span class="font-['Inter'] text-sm font-medium">Mindfulness</span>
+</a>
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-sm font-medium">Success Stories</span>
+</a>
+</nav>
+<button class="w-full mt-4 py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Start New Thread
+            </button>
+<div class="mt-auto pt-4 space-y-1">
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-['Inter'] text-sm font-medium">Moderation Hub</span>
+</a>
+<a class="flex items-center gap-3 text-[#c0c8c5] hover:bg-[#222941] px-4 py-3 rounded-xl transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-sm font-medium">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<main class="flex-1 relative flex flex-col items-center bg-background overflow-hidden px-4 md:px-8 py-6">
+<!-- Background Decorative Elements -->
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Thread Header -->
+<div class="w-full max-w-4xl mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 z-10">
+<div>
+<div class="flex items-center gap-2 text-secondary font-medium text-sm mb-2">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+                        Anonymous Encrypted Thread
+                    </div>
+<h1 class="font-['Manrope'] text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Strategies for Exam Anxiety</h1>
+<p class="text-on-surface-variant mt-2 max-w-2xl">Sharing proven methods to stay calm and focused during high-stakes testing. This is a judgment-free supportive zone.</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high text-secondary rounded-full text-xs font-semibold flex items-center gap-1">
+<span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span> 24 Active
+                    </span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-semibold">142 Messages</span>
+</div>
+</div>
+<!-- Discussion Feed -->
+<div class="w-full max-w-4xl flex-1 glass-panel rounded-3xl p-4 md:p-8 overflow-y-auto scrollbar-hide space-y-8 z-10 mb-24">
+<!-- Initial Post -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-secondary font-['Manrope']">OriginalPoster</span>
+<span class="text-xs text-on-surface-variant">2 hours ago</span>
+</div>
+<div class="bg-surface-container-high/40 rounded-2xl p-5 text-on-surface leading-relaxed border-l-4 border-secondary">
+                            Hey everyone. I have my finals starting next week and the physical symptoms of anxiety are becoming hard to manage. Racing heart, cold hands, and I can't seem to focus on one subject for more than 10 minutes. Does anyone have grounding techniques that actually work in the moment?
+                        </div>
+<div class="mt-3 flex justify-end">
+<button class="text-error/60 hover:text-error text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span> Report Concern
+                            </button>
+</div>
+</div>
+</div>
+<!-- Reply 1 -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-primary font-['Manrope']">CompassionateUser</span>
+<span class="text-xs text-on-surface-variant">1 hour ago</span>
+</div>
+<div class="bg-surface-container-high/40 rounded-2xl p-5 text-on-surface leading-relaxed">
+                            I'm so sorry you're feeling this way, but it's very common! Have you tried the 5-4-3-2-1 technique? 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. It forces your brain to reconnect with the physical environment instead of the future 'what-ifs'.
+                        </div>
+<div class="mt-3 flex justify-end">
+<button class="text-error/60 hover:text-error text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span> Report Concern
+                            </button>
+</div>
+</div>
+</div>
+<!-- Reply 2 -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-tertiary font-['Manrope']">QuietObserver</span>
+<span class="text-xs text-on-surface-variant">45 mins ago</span>
+</div>
+<div class="bg-surface-container-high/40 rounded-2xl p-5 text-on-surface leading-relaxed">
+                            Seconding the grounding techniques. Also, Box Breathing (4 in, 4 hold, 4 out, 4 hold) has saved me during exams. It physically lowers your heart rate. You can even do it during the test itself and no one will know. You got this!
+                        </div>
+<div class="mt-3 flex justify-end">
+<button class="text-error/60 hover:text-error text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span> Report Concern
+                            </button>
+</div>
+</div>
+</div>
+<!-- Reply 3 (Large Context) -->
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-2xl bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-2">
+<span class="font-bold text-secondary font-['Manrope']">SteadySupport</span>
+<span class="text-xs text-on-surface-variant">Just now</span>
+</div>
+<div class="bg-surface-container-high/40 rounded-2xl p-5 text-on-surface leading-relaxed">
+                            Don't forget to take micro-breaks! Studying for 10 minutes is better than not studying at all. Try the Pomodoro technique but maybe shorter intervals (15 study / 5 break) until you feel your focus coming back.
+                        </div>
+<div class="mt-3 flex justify-end">
+<button class="text-error/60 hover:text-error text-[10px] uppercase tracking-widest font-bold flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="flag">flag</span> Report Concern
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sleek Bottom Input -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 md:px-0 z-50">
+<div class="glass-panel rounded-2xl p-2 flex items-center gap-3 shadow-2xl">
+<button class="p-3 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 py-3" placeholder="Share your support or ask a question..." type="text"/>
+<button class="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary px-6 py-3 rounded-xl font-bold font-['Manrope'] shadow-lg flex items-center gap-2 hover:scale-105 active:scale-95 transition-all">
+                        Send
+                        <span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 bg-[#0b1229]/90 backdrop-blur-2xl rounded-t-[2rem] bg-gradient-to-t from-[#0b1229] to-[#141a32] shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#c0c8c5] px-6 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#99C1B9]/10 text-[#99C1B9] rounded-2xl px-6 py-2 transition-all scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c0c8c5] px-6 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Safe Journal</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c0c8c5] px-6 py-2 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

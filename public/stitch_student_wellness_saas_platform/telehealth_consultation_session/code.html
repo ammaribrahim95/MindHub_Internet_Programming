@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 76, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1229;
+            color: #dce1ff;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+        .glow-cyan {
+            box-shadow: 0 0 80px -10px rgba(147, 207, 235, 0.15);
+        }
+        .glow-sage {
+            box-shadow: 0 0 80px -10px rgba(180, 221, 213, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#060d24",
+                        "surface-dim": "#0b1229",
+                        "surface-container-high": "#222941",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#274d47",
+                        "surface-bright": "#323851",
+                        "background": "#0b1229",
+                        "on-tertiary-container": "#624400",
+                        "outline": "#8b9290",
+                        "on-secondary-container": "#88c4e0",
+                        "tertiary": "#ffcd76",
+                        "on-primary-container": "#2a504a",
+                        "inverse-primary": "#3f655f",
+                        "surface-container-low": "#141a32",
+                        "on-surface-variant": "#c0c8c5",
+                        "secondary-fixed-dim": "#93cfeb",
+                        "inverse-surface": "#dce1ff",
+                        "outline-variant": "#414846",
+                        "on-error": "#690005",
+                        "on-surface": "#dce1ff",
+                        "error-container": "#93000a",
+                        "surface-variant": "#2d344c",
+                        "surface-container-highest": "#2d344c",
+                        "on-primary-fixed": "#00201c",
+                        "on-background": "#dce1ff",
+                        "surface-tint": "#a6cfc6",
+                        "secondary-fixed": "#bde9ff",
+                        "tertiary-container": "#f1ad00",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "on-tertiary-fixed": "#271900",
+                        "surface": "#0b1229",
+                        "on-primary": "#0e3631",
+                        "tertiary-fixed": "#ffdea9",
+                        "on-secondary-fixed-variant": "#004d64",
+                        "secondary-container": "#01526a",
+                        "primary-container": "#99c1b9",
+                        "on-secondary-fixed": "#001f2a",
+                        "primary-fixed-dim": "#a6cfc6",
+                        "inverse-on-surface": "#292f48",
+                        "surface-container": "#181e36",
+                        "primary": "#b4ddd5",
+                        "primary-fixed": "#c2ebe2",
+                        "tertiary-fixed-dim": "#ffba27",
+                        "secondary": "#93cfeb",
+                        "on-secondary": "#003546",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#422c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="flex h-screen overflow-hidden">
+<!-- SideNavBar (from JSON) -->
+<aside class="hidden md:flex flex-col h-full p-4 space-y-2 bg-[#141a32] w-64 border-r border-[#222941] shrink-0">
+<div class="px-4 py-6 mb-4">
+<h1 class="text-[#dce1ff] font-bold text-lg font-headline tracking-tighter">LuminaHealth</h1>
+</div>
+<div class="flex items-center gap-3 px-4 py-4 mb-6 bg-surface-container-high rounded-xl">
+<img alt="Dr. Aris Thorne" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a friendly middle-aged doctor with a stethoscope, warm lighting, clinical but modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcAWx80_UiKWtiYnEI25coh8FMHmHlBX1Do0ELOXD2dTUklB-IbVyoDjEfSZ0HDVgFoslcUVx8iHamm91Ns5ZqACqnHCgtLNklUnekgbx04IZdW6Woei_HKO7AMuPTcGjSgGbXoenaXAK2V2ekzLCGBExCJj9bwG8pdVIbT3WmkLojhx0d0xRTce6YzBH9QHTy-Bkz5az6puPFHYcYo8h0qfl9pi_QyWQ4iSgwyfuFwywDfcGUsAg-BzcFLSn4xVq6cm5aXehYvJrv"/>
+<div>
+<p class="font-headline text-sm font-bold text-[#dce1ff]">Dr. Aris Thorne</p>
+<p class="text-xs text-on-surface-variant">On-call Physician</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active: Session -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#222941] text-[#93cfeb] rounded-lg shadow-[0_0_15px_rgba(147,207,235,0.1)] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+<span class="font-headline text-sm font-medium">Session</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#c0c8c5] hover:bg-[#222941] hover:text-[#dce1ff] rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-headline text-sm font-medium">History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#c0c8c5] hover:bg-[#222941] hover:text-[#dce1ff] rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-headline text-sm font-medium">Assistant</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#c0c8c5] hover:bg-[#222941] hover:text-[#dce1ff] rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-headline text-sm font-medium">Settings</span>
+</a>
+</nav>
+<button class="mt-auto mx-2 bg-gradient-to-br from-[#b4ddd5] to-[#99c1b9] text-[#0e3631] font-bold py-3 rounded-xl shadow-lg hover:scale-[0.98] transition-transform">
+            New Consultation
+        </button>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 flex flex-col relative">
+<!-- TopAppBar (from JSON) -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-[#0b1229]/60 backdrop-blur-xl">
+<div class="flex items-center gap-8">
+<span class="hidden md:block text-xl font-bold tracking-tighter text-[#dce1ff] font-headline">Session Live</span>
+<nav class="hidden lg:flex gap-6">
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] font-headline text-sm" href="#">Dashboard</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] font-headline text-sm" href="#">Schedule</a>
+<a class="text-[#c0c8c5] hover:text-[#dce1ff] font-headline text-sm" href="#">Records</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#c0c8c5] hover:bg-[#dce1ff]/5 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#c0c8c5] hover:bg-[#dce1ff]/5 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30">
+<img alt="Provider profile" class="w-full h-full object-cover" data-alt="close-up portrait of a young college student with a gentle smile, soft natural lighting, blurred university library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-SeUAwjSTAEs1tpo_XC9Wpl5kmg-yrHqm5pz7m7ffhwm7gL02g_PF5M7clmoRwX0OZNre5KTBwS3ucsA6S81-zp6qIu8Ibp1_-wbGCjSYt-03hvKdwQhHIMPyEvm8fP-8eB2zwdI7cVyG-C__4dSyragtJYJEsnOfbc8VncFyTldopNBrMHNcYjLzzkFvI8tpV910pvbVeUmy8Yxrannw28MywHJI3AiSPnl6LW0rOvcly8glki7Arj8d6FRBIrBH8XRgRUKIyK9s"/>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#222941] to-transparent"></div>
+</header>
+<!-- Session Content -->
+<section class="flex-1 flex p-6 gap-6 overflow-hidden relative">
+<!-- Decorative Glows -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#93cfeb]/10 blur-[120px] rounded-full -z-10"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#b4ddd5]/5 blur-[120px] rounded-full -z-10"></div>
+<!-- Left Column: Video Feeds -->
+<div class="flex-[2] flex flex-col gap-4 relative">
+<!-- Main Doctor Video -->
+<div class="relative flex-1 rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(11,18,41,0.5)] border border-on-surface/5">
+<img alt="Dr. Elena Rodriguez" class="w-full h-full object-cover" data-alt="professional female doctor Elena Rodriguez looking into the camera with a calm empathetic expression, cinematic soft lighting, premium office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC5HMKB5wZNkmHWWXK7Q2MaI4SIM2zqNn9n17kOoxQTxLwHGgUfpdDyWMNqnZ1DFfvdWfFC56AyqtGeKEb4TxX9ODwTIViXzC_lp0kgq_bPPnUgw56O5keAgH6WMdtsNyUDHActKMW6Cazq7Qe7FGg_MxXi5NGjVw1DBAgndUHzo289QZGmcc6olasOMZYGXMT0YG1DL2sF-GZKsWsfYtGeTMHVWRW7Y-f9E0y4IWsk4xuRCJEfrQaqz0oN4GaolqP3rQ4e9CwpMCH"/>
+<!-- Doctor Label -->
+<div class="absolute top-6 left-6 px-4 py-2 glass-panel rounded-full flex items-center gap-2 border border-white/10">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-sm font-headline font-bold text-white">Dr. Elena Rodriguez</span>
+</div>
+<!-- User Inset Video -->
+<div class="absolute bottom-6 right-6 w-48 h-32 md:w-64 md:h-44 rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl group transition-transform hover:scale-105">
+<img alt="User video" class="w-full h-full object-cover" data-alt="young college student in a comfortable home setting, soft warm lighting, focused and engaged in a video call" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyAwTKK_JZfWWsojdm_fOgAJ3L940Z7F07pj3zT5gvAqoQBIMo9sHLFQ_adtgADTvdeuVbbg13caua-HdPrSWYofds2iJghXeJoQ2zya9VWFFyVx6-2Xg_eGyCXtVyWKsWp8oifUm8-KhZ5UMzQHgKCeOlXOQ1QgW-fM4FPjWBNzyHyqucMtlPS2aKp6AJcY5EFg17QqBFXo9dSYklreVjfq6M05nRHlK0trXDDeCVwSqkdWQPsT5wOYCsqWhMC8_sITudDXSAJ1l7"/>
+<div class="absolute bottom-2 left-2 px-2 py-1 bg-black/40 backdrop-blur-md rounded-md">
+<span class="text-[10px] font-headline text-white/80">You (Alex)</span>
+</div>
+</div>
+<!-- Floating Control Bar -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 px-6 py-3 glass-panel rounded-2xl border border-white/5 shadow-2xl">
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-highest text-[#dce1ff] hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-highest text-[#dce1ff] hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-highest text-[#dce1ff] hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined" data-icon="screen_share">screen_share</span>
+</button>
+<div class="w-[1px] h-6 bg-white/10 mx-2"></div>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-error/90 text-on-error hover:bg-error transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="call_end" style="font-variation-settings: 'FILL' 1;">call_end</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Lumina AI Assistant -->
+<div class="hidden lg:flex flex-1 flex-col gap-4">
+<div class="flex-1 glass-panel rounded-[2rem] p-6 border border-white/5 flex flex-col">
+<!-- AI Header -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary to-secondary-container flex items-center justify-center shadow-[0_0_20px_rgba(147,207,235,0.3)]">
+<span class="material-symbols-outlined text-[#001f2a]" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-[#dce1ff]">Lumina AI</h3>
+<p class="text-[10px] text-secondary font-bold uppercase tracking-widest">Active Assistant</p>
+</div>
+</div>
+<button class="p-2 hover:bg-white/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Chat/Note Area -->
+<div class="flex-1 flex flex-col space-y-6 overflow-y-auto pr-2 custom-scrollbar">
+<!-- Message 1 -->
+<div class="space-y-2">
+<div class="bg-surface-container-high/50 p-4 rounded-2xl rounded-tl-none border-l-2 border-secondary">
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Hi Alex, I'm Lumina. I'm here to help you capture insights or provide support during your session with Dr. Rodriguez. This is a safe, private space.
+                                </p>
+</div>
+<span class="text-[10px] text-on-surface-variant/50 ml-1">10:02 AM</span>
+</div>
+<!-- Notes Section -->
+<div class="pt-4">
+<div class="flex items-center gap-2 mb-4 text-[#b4ddd5]">
+<span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span>
+<span class="text-xs font-bold uppercase tracking-widest">Session Notes</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/10 min-h-[150px]">
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-on-surface">
+<span class="text-secondary">•</span>
+                                        Discussed stress management during finals week.
+                                    </li>
+<li class="flex gap-3 text-sm text-on-surface">
+<span class="text-secondary">•</span>
+                                        Dr. Elena suggested "box breathing" technique.
+                                    </li>
+<li class="flex gap-3 text-sm text-on-surface italic text-on-surface-variant">
+                                        Type your thoughts here...
+                                    </li>
+</ul>
+</div>
+</div>
+<!-- AI Suggestion Chip -->
+<div class="p-4 bg-tertiary-container/10 rounded-2xl border border-tertiary/20 flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<div class="space-y-1">
+<p class="text-xs font-bold text-tertiary">Suggestion</p>
+<p class="text-xs text-on-surface-variant">Would you like me to find some resources on box breathing for you later?</p>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="mt-6 relative">
+<input class="w-full bg-surface-container-highest/50 border-b border-outline-variant py-4 px-4 pr-12 text-sm focus:outline-none focus:border-secondary transition-colors rounded-t-xl" placeholder="Ask Lumina or add a note..." type="text"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-secondary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation (Mobile Only, from JSON) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1229]/80 backdrop-blur-2xl border-t border-[#dce1ff]/10">
+<div class="flex flex-col items-center justify-center text-[#c0c8c5] p-3 hover:text-[#b4ddd5] transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#b4ddd5] to-[#99c1b9] text-[#0b1229] rounded-2xl p-3 shadow-lg scale-110 -translate-y-2">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Session</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#c0c8c5] p-3 hover:text-[#b4ddd5] transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</main>
+</body></html>
