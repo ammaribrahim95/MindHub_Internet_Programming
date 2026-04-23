@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SereneMind - Book Your Session</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#2d344c",
+                      "surface-dim": "#0b1229",
+                      "inverse-primary": "#3f655f",
+                      "on-primary-fixed": "#00201c",
+                      "on-surface": "#dce1ff",
+                      "on-secondary-container": "#88c4e0",
+                      "surface-container-highest": "#2d344c",
+                      "surface-bright": "#323851",
+                      "secondary-fixed": "#bde9ff",
+                      "inverse-surface": "#dce1ff",
+                      "inverse-on-surface": "#292f48",
+                      "surface-container-low": "#141a32",
+                      "primary": "#b4ddd5",
+                      "on-primary": "#0e3631",
+                      "on-background": "#dce1ff",
+                      "on-secondary-fixed-variant": "#004d64",
+                      "error-container": "#93000a",
+                      "primary-fixed": "#c2ebe2",
+                      "tertiary-container": "#f1ad00",
+                      "on-tertiary-fixed": "#271900",
+                      "on-surface-variant": "#c0c8c5",
+                      "outline": "#8b9290",
+                      "surface-container-lowest": "#060d24",
+                      "error": "#ffb4ab",
+                      "surface": "#0b1229",
+                      "tertiary-fixed-dim": "#ffba27",
+                      "outline-variant": "#414846",
+                      "on-primary-fixed-variant": "#274d47",
+                      "surface-container-high": "#222941",
+                      "surface-container": "#181e36",
+                      "on-secondary-fixed": "#001f2a",
+                      "tertiary-fixed": "#ffdea9",
+                      "on-secondary": "#003546",
+                      "secondary-container": "#01526a",
+                      "on-error": "#690005",
+                      "tertiary": "#ffcd76",
+                      "on-tertiary-container": "#624400",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#a6cfc6",
+                      "primary-container": "#99c1b9",
+                      "on-tertiary": "#422c00",
+                      "secondary": "#93cfeb",
+                      "on-primary-container": "#2a504a",
+                      "background": "#0b1229",
+                      "surface-tint": "#a6cfc6",
+                      "secondary-fixed-dim": "#93cfeb",
+                      "on-tertiary-fixed-variant": "#5e4100"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 76, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #0b1229;
+            color: #dce1ff;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #b4ddd5 0%, #99c1b9 100%);
+        }
+        .shadow-ambient {
+            box-shadow: 0 40px 60px rgba(220, 225, 255, 0.06);
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar Section -->
+<header class="bg-[#0b1229]/80 backdrop-blur-lg docked full-width top-0 sticky z-50 shadow-[0_20px_50px_rgba(11,18,41,0.6)]">
+<div class="flex justify-between items-center w-full px-8 py-4">
+<div class="text-2xl font-extrabold text-[#dce1ff] tracking-tighter">SereneMind</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#c0c8c5] font-medium hover:text-[#ffffff] hover:bg-white/5 transition-all px-3 py-1 rounded-lg active:scale-95 transition-transform" href="#">Dashboard</a>
+<a class="text-[#b4ddd5] font-bold border-b-2 border-[#b4ddd5] hover:text-[#ffffff] hover:bg-white/5 transition-all px-3 py-1 active:scale-95 transition-transform" href="#">Appointments</a>
+<a class="text-[#c0c8c5] font-medium hover:text-[#ffffff] hover:bg-white/5 transition-all px-3 py-1 rounded-lg active:scale-95 transition-transform" href="#">Therapists</a>
+<a class="text-[#c0c8c5] font-medium hover:text-[#ffffff] hover:bg-white/5 transition-all px-3 py-1 rounded-lg active:scale-95 transition-transform" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#b4ddd5] p-2 hover:bg-white/5 rounded-full transition-all">notifications</button>
+<button class="material-symbols-outlined text-[#b4ddd5] p-2 hover:bg-white/5 rounded-full transition-all">settings</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary-container/20">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly man with a slight smile, studio lighting, warm professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfweTKoMUFYRRe_Z-Zscv6RRYLgkj6O_0StRulJthoD1fNwV6vdODyL_40h76ReGZV3qUHHWp3BVrCgp70jlw61xKe_eMWXMhCOo8aJpcNY9lJ_ujvVFqMTn-T4pwInbKGhb4mQRWXVSMAoZk5ckWjy7NzQWZQhA4H3c_Ii9UtkWXTbQlbbfbTmW2r1u__dEYMuJbkeNtqKkYK1zBY6jdGHtjanFeFPqkBg-vvkNgBlv8_E6tVlk0Y1Hw16TcQ2_eyWc-wkAwy4hfd"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-4">Book Your Session</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">Find a time that works for you. Your journey to mental clarity starts with a single, focused conversation.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Selection Area (2/3) -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Calendar Section -->
+<section class="glass-panel p-8 rounded-xl shadow-ambient">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">calendar_month</span>
+                            Select a Date
+                        </h2>
+<div class="flex items-center gap-4 bg-surface-container-high p-1 rounded-lg">
+<button class="p-2 hover:bg-surface-container-highest rounded-md transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<span class="font-headline font-semibold text-sm px-2">November 2024</span>
+<button class="p-2 hover:bg-surface-container-highest rounded-md transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-2">
+<!-- Days of week -->
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Sun</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Mon</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Tue</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Wed</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Thu</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Fri</div>
+<div class="text-center py-2 text-xs font-bold text-outline uppercase tracking-widest">Sat</div>
+<!-- Dates (Example block) -->
+<div class="aspect-square flex items-center justify-center text-on-surface-variant/40 text-sm">27</div>
+<div class="aspect-square flex items-center justify-center text-on-surface-variant/40 text-sm">28</div>
+<div class="aspect-square flex items-center justify-center text-on-surface-variant/40 text-sm">29</div>
+<div class="aspect-square flex items-center justify-center text-on-surface-variant/40 text-sm">30</div>
+<div class="aspect-square flex items-center justify-center text-on-surface-variant/40 text-sm">31</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">1</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">2</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">3</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">4</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">5</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">6</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">7</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">8</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">9</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">10</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">11</div>
+<div class="aspect-square flex items-center justify-center signature-gradient text-on-primary font-bold rounded-lg cursor-pointer shadow-[0_0_20px_rgba(180,221,213,0.3)]">12</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">13</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">14</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">15</div>
+<div class="aspect-square flex items-center justify-center hover:bg-surface-container-highest rounded-lg cursor-pointer transition-all text-on-surface">16</div>
+</div>
+</section>
+<!-- Time Slot Section -->
+<section class="bg-surface-container-low p-8 rounded-xl">
+<h2 class="text-xl font-bold text-on-surface flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-tertiary">schedule</span>
+                        Available Time Slots
+                    </h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">09:00 AM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Morning</span>
+</button>
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">10:30 AM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Morning</span>
+</button>
+<button class="py-4 px-2 rounded-xl signature-gradient text-on-primary shadow-[0_0_20px_rgba(180,221,213,0.2)] transition-all active:scale-95">
+<span class="block text-sm font-bold">01:00 PM</span>
+<span class="text-[10px] text-on-primary-container/70 uppercase tracking-wider">Afternoon</span>
+</button>
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">02:30 PM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Afternoon</span>
+</button>
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">04:00 PM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Afternoon</span>
+</button>
+<button class="py-4 px-2 rounded-xl opacity-30 cursor-not-allowed bg-surface-container-lowest border border-outline-variant/10 text-on-surface-variant">
+<span class="block text-sm font-semibold">05:30 PM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Unavailable</span>
+</button>
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">07:00 PM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Evening</span>
+</button>
+<button class="py-4 px-2 rounded-xl bg-surface-container-high border border-outline-variant/20 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface transition-all active:scale-95">
+<span class="block text-sm font-semibold">08:30 PM</span>
+<span class="text-[10px] text-outline uppercase tracking-wider">Evening</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Summary Panel (1/3) -->
+<aside class="space-y-6 lg:sticky lg:top-28">
+<div class="glass-panel p-6 rounded-2xl shadow-ambient border border-white/5 overflow-hidden relative">
+<!-- Subtle background decorative blob -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/10 blur-3xl rounded-full"></div>
+<h3 class="text-lg font-bold text-on-surface mb-6 relative z-10">Appointment Summary</h3>
+<div class="flex items-center gap-4 mb-8 p-4 bg-white/5 rounded-xl border border-white/5">
+<img alt="Therapist profile" class="w-16 h-16 rounded-full object-cover" data-alt="Professional woman doctor in a light blue blazer, clean medical office background, confident and kind expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWpKlRuChcmSACA6lfGte7EM5w__N1rNVojFE7hSwg9yLT3TBFrCOBZFBwqSysFjsyEjwlgeFne5IfeucaN3cdSqMwIVCuYn-CnCMEL39taAR95BmFH0VXo_fYHxUQC2uW4iQdgSVobg6y_1MydVnPSvKtaH-43iDOwuiBJ_2EpM3uDQegdXcEeQci8jL6riN4XeDKzSp3G53LHDtWsx8HKZFAPDowsnGgrJ0_KKp4r3xNgZzYuU-IdFbhJRktXS-pT-P5WFmMmDwZ"/>
+<div>
+<p class="font-headline font-bold text-on-surface">Dr. Elena Vance</p>
+<p class="text-xs text-secondary font-medium">Cognitive Behavioral Specialist</p>
+</div>
+</div>
+<div class="space-y-6 mb-8">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+</div>
+<div>
+<p class="text-xs text-outline font-bold uppercase tracking-widest">Service</p>
+<p class="text-on-surface font-semibold">Initial Consultation (60m)</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">event</span>
+</div>
+<div>
+<p class="text-xs text-outline font-bold uppercase tracking-widest">Date &amp; Time</p>
+<p class="text-on-surface font-semibold">Tuesday, Nov 12 • 01:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-surface-container-highest rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+</div>
+<div>
+<p class="text-xs text-outline font-bold uppercase tracking-widest">Investment</p>
+<p class="text-on-surface font-semibold">$120.00 <span class="text-xs text-on-surface-variant font-normal">(Insurance accepted)</span></p>
+</div>
+</div>
+</div>
+<button class="w-full signature-gradient py-4 rounded-xl text-on-primary font-extrabold tracking-tight hover:brightness-110 transition-all shadow-lg active:scale-95 group">
+                        Book Session
+                        <span class="material-symbols-outlined inline-block align-middle ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-[11px] text-on-surface-variant text-center mt-4 px-4 leading-relaxed">
+                        By booking, you agree to our <a class="underline hover:text-secondary" href="#">Cancellation Policy</a>. A reminder will be sent 24 hours prior.
+                    </p>
+</div>
+<!-- Secondary Info Card -->
+<div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h4 class="text-sm font-bold text-on-surface">Secure Session</h4>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                        All sessions are end-to-end encrypted and HIPAA compliant. Your privacy is our highest priority.
+                    </p>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar Section (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full bg-[#0b1229]/90 backdrop-blur-md flex justify-around items-center px-4 py-3 pb-safe z-50 rounded-t-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<button class="flex flex-col items-center justify-center text-[#c0c8c5] hover:bg-[#2d344c] transition-colors p-2 rounded-lg active:scale-90">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#222941] text-[#b4ddd5] rounded-xl px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-['Inter'] text-[11px] font-medium">Sessions</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#c0c8c5] hover:bg-[#2d344c] transition-colors p-2 rounded-lg active:scale-90">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-medium">Messages</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#c0c8c5] hover:bg-[#2d344c] transition-colors p-2 rounded-lg active:scale-90">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium">Profile</span>
+</button>
+</footer>
+</body></html>

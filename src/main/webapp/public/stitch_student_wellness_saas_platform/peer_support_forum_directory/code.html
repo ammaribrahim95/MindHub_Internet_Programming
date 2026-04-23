@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LuminaSupport | Student Peer Forum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#b4ddd5",
+                      "secondary-fixed-dim": "#93cfeb",
+                      "tertiary": "#ffcd76",
+                      "on-primary": "#0e3631",
+                      "surface-container-low": "#141a32",
+                      "surface-container-high": "#222941",
+                      "secondary-fixed": "#bde9ff",
+                      "on-tertiary-container": "#624400",
+                      "inverse-primary": "#3f655f",
+                      "on-primary-fixed-variant": "#274d47",
+                      "on-secondary": "#003546",
+                      "on-primary-container": "#2a504a",
+                      "on-tertiary-fixed-variant": "#5e4100",
+                      "surface-variant": "#2d344c",
+                      "on-secondary-fixed": "#001f2a",
+                      "outline": "#8b9290",
+                      "secondary": "#93cfeb",
+                      "on-background": "#dce1ff",
+                      "secondary-container": "#01526a",
+                      "on-secondary-fixed-variant": "#004d64",
+                      "on-secondary-container": "#88c4e0",
+                      "surface-container-highest": "#2d344c",
+                      "on-tertiary-fixed": "#271900",
+                      "on-surface-variant": "#c0c8c5",
+                      "inverse-surface": "#dce1ff",
+                      "primary-container": "#99c1b9",
+                      "surface-dim": "#0b1229",
+                      "surface": "#0b1229",
+                      "primary-fixed-dim": "#a6cfc6",
+                      "primary-fixed": "#c2ebe2",
+                      "error-container": "#93000a",
+                      "surface-container": "#181e36",
+                      "surface-bright": "#323851",
+                      "on-tertiary": "#422c00",
+                      "on-primary-fixed": "#00201c",
+                      "background": "#0b1229",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#a6cfc6",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#292f48",
+                      "tertiary-fixed": "#ffdea9",
+                      "on-surface": "#dce1ff",
+                      "tertiary-fixed-dim": "#ffba27",
+                      "outline-variant": "#414846",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-lowest": "#060d24",
+                      "tertiary-container": "#f1ad00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "1rem",
+                      "xl": "1.25rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #0b1229; color: #dce1ff; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#0b1229]/80 backdrop-blur-lg docked full-width top-0 sticky z-50 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center w-full px-8 py-3">
+<div class="flex items-center gap-6">
+<span class="text-xl font-extrabold tracking-tighter text-slate-50 font-headline">LuminaSupport</span>
+<div class="hidden md:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-slate-300 w-64 placeholder-slate-500" placeholder="Search for support topics..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-[#99C1B9] font-['Manrope'] font-bold tracking-tight text-slate-100 hidden sm:block">Safe &amp; Anonymous</span>
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#222941] hover:text-[#b4ddd5] transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-[#222941] hover:text-[#b4ddd5] transition-all duration-300 p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="bg-[#141a32]/60 backdrop-blur-xl h-screen w-72 fixed left-0 top-0 pt-20 hidden md:flex flex-col gap-2 p-4 z-40 shadow-2xl shadow-[#0b1229] bg-gradient-to-r from-transparent to-[#222941]/20">
+<div class="mb-8 px-4">
+<h3 class="text-lg font-black text-[#99C1B9] font-headline uppercase tracking-widest text-xs opacity-60 mb-1">Forum Categories</h3>
+<p class="font-['Inter'] text-sm tracking-wide text-slate-300 opacity-60">Anonymous Support</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#222941] text-[#99C1B9] rounded-xl font-semibold shadow-inner transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-sm tracking-wide">Home Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#222941]/50 hover:text-slate-100 rounded-xl hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-['Inter'] text-sm tracking-wide">Stress &amp; Anxiety</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#222941]/50 hover:text-slate-100 rounded-xl hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-['Inter'] text-sm tracking-wide">Academic Peer</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#222941]/50 hover:text-slate-100 rounded-xl hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Inter'] text-sm tracking-wide">Self-Care Hub</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#222941]/50 hover:text-slate-100 rounded-xl hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span class="font-['Inter'] text-sm tracking-wide">Success Stories</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-surface-container-high rounded-xl mb-6">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="lock_person">lock_person</span>
+</div>
+<div>
+<p class="text-xs font-bold text-primary-container">Secure Space</p>
+<p class="text-[10px] text-slate-400">Identity hidden</p>
+</div>
+</div>
+<button class="w-full py-2 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-lg text-sm active:scale-98 transition-transform">
+                    Start Discussion
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="md:ml-72 flex-1 p-8 lg:p-12 mt-4">
+<!-- Hero Header Section -->
+<section class="mb-12">
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+<div class="max-w-2xl">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container/30 border border-secondary/20 text-secondary-fixed-dim text-xs font-bold tracking-wider uppercase mb-4">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="verified_user">verified_user</span>
+                            Anonymity Guaranteed
+                        </div>
+<h1 class="text-4xl lg:text-5xl font-extrabold font-headline text-slate-50 tracking-tight leading-tight mb-4">
+                            You're not alone, <br/><span class="text-primary">neither is your journey.</span>
+</h1>
+<p class="text-lg text-slate-400 font-body leading-relaxed">
+                            Share experiences, ask for advice, or just vent. Every student here is verified, but your name remains yours alone.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+<div class="bg-surface-container-low p-4 rounded-xl text-center border-b-2 border-primary/20">
+<div class="text-2xl font-bold text-primary">1.2k</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Active Today</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl text-center border-b-2 border-secondary/20">
+<div class="text-2xl font-bold text-secondary">48</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Live Circles</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid of Topics -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Large Featured Card -->
+<div class="md:col-span-2 lg:row-span-2 bg-gradient-to-br from-surface-container-high/80 to-surface-container-low/40 backdrop-blur-xl rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10 group">
+<div class="flex justify-between items-start mb-12">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl" data-icon="book_5">book_5</span>
+</div>
+<div class="px-4 py-1 rounded-full bg-primary/20 text-primary-fixed text-xs font-bold">Featured</div>
+</div>
+<div>
+<div class="flex gap-2 mb-4">
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-slate-400 border border-outline-variant/20">Academics</span>
+<span class="text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-slate-400 border border-outline-variant/20">Stress</span>
+</div>
+<h2 class="text-3xl font-bold font-headline text-slate-50 mb-4">Exam Anxiety &amp; Final Prep</h2>
+<p class="text-slate-400 mb-8 line-clamp-3">A collective space to share study techniques, manage pre-exam jitters, and support each other through the final sprint of the semester.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-slate-700"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-slate-600"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-slate-500"></div>
+</div>
+<span class="text-xs text-slate-300 font-semibold">142 students active</span>
+</div>
+<button class="bg-primary hover:bg-primary-fixed-dim text-on-primary px-6 py-2 rounded-lg font-bold text-sm transition-all">Join Room</button>
+</div>
+</div>
+</div>
+<!-- Topic Card 2: Burnout -->
+<div class="bg-surface-container-high/60 backdrop-blur-md rounded-xl p-6 border border-outline-variant/10 hover:border-secondary/30 transition-all flex flex-col justify-between h-80">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Self-Care</span>
+</div>
+<h3 class="text-xl font-bold text-slate-50 mb-2">Dealing with Burnout</h3>
+<p class="text-xs text-slate-400 mb-4">When everything feels like too much. Recharge together.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-500">42 posts</span>
+<span class="text-xs text-secondary-fixed-dim font-bold">12 Active</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[40%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Topic Card 3: Sleep -->
+<div class="bg-surface-container-high/60 backdrop-blur-md rounded-xl p-6 border border-outline-variant/10 hover:border-tertiary/30 transition-all flex flex-col justify-between h-80">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="bedtime">bedtime</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Health</span>
+</div>
+<h3 class="text-xl font-bold text-slate-50 mb-2">Sleep Issues</h3>
+<p class="text-xs text-slate-400 mb-4">Insomnia, late-night study cycles, and fixing your clock.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-500">89 posts</span>
+<span class="text-xs text-tertiary font-bold">29 Active</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[70%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Topic Card 4: Social Connection -->
+<div class="bg-surface-container-high/60 backdrop-blur-md rounded-xl p-6 border border-outline-variant/10 hover:border-primary/30 transition-all flex flex-col justify-between h-80 lg:row-start-2">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Social</span>
+</div>
+<h3 class="text-xl font-bold text-slate-50 mb-2">Social Connection</h3>
+<p class="text-xs text-slate-400 mb-4">Making friends, social anxiety, and campus life.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-500">156 posts</span>
+<span class="text-xs text-primary font-bold">54 Active</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Topic Card 5: Finance -->
+<div class="bg-surface-container-high/60 backdrop-blur-md rounded-xl p-6 border border-outline-variant/10 hover:border-secondary/30 transition-all flex flex-col justify-between h-80 lg:row-start-2">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="payments">payments</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Stress</span>
+</div>
+<h3 class="text-xl font-bold text-slate-50 mb-2">Financial Stress</h3>
+<p class="text-xs text-slate-400 mb-4">Managing debt, budgeting, and job hunting anxiety.</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-500">31 posts</span>
+<span class="text-xs text-secondary-fixed-dim font-bold">8 Active</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[25%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Anonymous Badge Section -->
+<section class="mt-16 bg-surface-container-low rounded-2xl overflow-hidden relative">
+<div class="flex flex-col md:flex-row items-center">
+<div class="p-8 md:p-12 md:w-3/5">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-3 bg-secondary/10 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified_user" data-weight="fill">verified_user</span>
+</div>
+<h2 class="text-2xl font-bold text-slate-50">Our Safety Promise</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="visibility_off">visibility_off</span>
+<div>
+<h4 class="font-bold text-slate-100 text-sm mb-1">True Anonymity</h4>
+<p class="text-xs text-slate-400 leading-relaxed">No real names or student IDs are ever shown to peers.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="shield_lock">shield_lock</span>
+<div>
+<h4 class="font-bold text-slate-100 text-sm mb-1">Moderated Space</h4>
+<p class="text-xs text-slate-400 leading-relaxed">24/7 peer support leads ensure a kind environment.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="health_and_safety">health_and_safety</span>
+<div>
+<h4 class="font-bold text-slate-100 text-sm mb-1">Direct Help</h4>
+<p class="text-xs text-slate-400 leading-relaxed">One-click access to professional counseling if needed.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="policy">policy</span>
+<div>
+<h4 class="font-bold text-slate-100 text-sm mb-1">No Trace</h4>
+<p class="text-xs text-slate-400 leading-relaxed">We don't track your data for marketing or records.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/5 h-64 md:h-full min-h-[300px] relative">
+<img alt="Safety" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 mix-blend-luminosity" data-alt="abstract artistic shot of blue glowing particles floating in a deep navy space creating a sense of ethereal safety and privacy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8NX3KFiRb0nh0DYjyWjpES4Wspdczgrevz2fEdMrLo412LG2lNtJ_BH8myHVgHCs7TjaVpoMCaLvDoH-ThQvbuDq0evI6wdBWfZ2wp1RfNkYw-37DO8j5ASbR_dx1vJGflg7mb2XXUMiXYAtydf59xbsidOnYO3yl1o5TRjqIpzBuTInJOY56A6WYoJcD54uJuJlv-wvgaW8xe5CinoSecxBwOOUHbSbiUbiErrcCV2DHQJojLXrKGEPs5URbBmzabzuDDGhPgob"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-surface-container-low/60 to-transparent"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="bg-surface/80 backdrop-blur-xl border border-outline-variant/30 p-6 rounded-xl text-center max-w-xs shadow-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<p class="text-sm font-bold text-slate-100">End-to-End Encryption</p>
+<p class="text-[10px] text-slate-500 mt-2 uppercase tracking-widest">Active Connection Secure</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Mobile Nav Bar -->
+<footer class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-high/90 backdrop-blur-xl z-50 border-t border-outline-variant/10">
+<div class="flex justify-around items-center h-16">
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] mt-1 font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="text-[10px] mt-1 font-medium">Talk</span>
+</button>
+<button class="flex flex-col items-center bg-primary text-on-primary w-12 h-12 rounded-full -mt-8 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined mt-2.5" data-icon="add">add</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px] mt-1 font-medium">Learn</span>
+</button>
+<button class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] mt-1 font-medium">Profile</span>
+</button>
+</div>
+</footer>
+</body></html>

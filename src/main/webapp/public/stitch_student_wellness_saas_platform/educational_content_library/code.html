@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nocturnal - Content Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#2d344c",
+                    "secondary": "#93cfeb",
+                    "on-tertiary-container": "#624400",
+                    "tertiary-container": "#f1ad00",
+                    "secondary-fixed": "#bde9ff",
+                    "on-tertiary-fixed-variant": "#5e4100",
+                    "tertiary-fixed-dim": "#ffba27",
+                    "on-secondary-fixed-variant": "#004d64",
+                    "outline-variant": "#414846",
+                    "on-primary-fixed": "#00201c",
+                    "outline": "#8b9290",
+                    "tertiary": "#ffcd76",
+                    "on-primary": "#0e3631",
+                    "surface-bright": "#323851",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#dce1ff",
+                    "on-tertiary": "#422c00",
+                    "on-surface-variant": "#c0c8c5",
+                    "secondary-fixed-dim": "#93cfeb",
+                    "surface-container-low": "#141a32",
+                    "surface-variant": "#2d344c",
+                    "on-secondary-container": "#88c4e0",
+                    "on-tertiary-fixed": "#271900",
+                    "tertiary-fixed": "#ffdea9",
+                    "inverse-primary": "#3f655f",
+                    "on-error": "#690005",
+                    "primary-fixed": "#c2ebe2",
+                    "on-secondary": "#003546",
+                    "surface-container-high": "#222941",
+                    "primary": "#b4ddd5",
+                    "background": "#0b1229",
+                    "surface": "#0b1229",
+                    "inverse-on-surface": "#292f48",
+                    "surface-container-lowest": "#060d24",
+                    "on-primary-container": "#2a504a",
+                    "primary-fixed-dim": "#a6cfc6",
+                    "surface-tint": "#a6cfc6",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed": "#001f2a",
+                    "surface-dim": "#0b1229",
+                    "surface-container": "#181e36",
+                    "on-primary-fixed-variant": "#274d47",
+                    "on-error-container": "#ffdad6",
+                    "primary-container": "#99c1b9",
+                    "on-background": "#dce1ff",
+                    "on-surface": "#dce1ff",
+                    "secondary-container": "#01526a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 76, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-slate-950/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(11,18,41,0.6)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-[#b4ddd5] font-headline">Nocturnal</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-400 hover:text-[#dce1ff] transition-colors" href="#">Explore</a>
+<a class="text-[#93cfeb] font-semibold border-b-2 border-[#93cfeb] pb-1" href="#">Library</a>
+<a class="text-slate-400 hover:text-[#dce1ff] transition-colors" href="#">My Wellness</a>
+<a class="text-slate-400 hover:text-[#dce1ff] transition-colors" href="#">Journal</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:bg-slate-800/50 hover:text-white transition-all rounded-full scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:bg-slate-800/50 hover:text-white transition-all rounded-full scale-95 active:scale-90 duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden bg-surface-container-high ml-2 border border-outline-variant/20">
+<img alt="User avatar" data-alt="close-up portrait of a young professional student with a calm expression in soft moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgvaJdjQvtGAUCbOcplHUN4dOhWS-iwEqPWv2BpNEnRI798FxpgLC0bZvYJuW6kVwjKCI0wAWwXsIR1vKU5gCLFak4W063NIupeqYX8mw6Umq2tR95yGN2Hb0dBL6zsiArW9H2FHNcYj1JP-K-GOnpRJnCJGhvO4nFkEuXxGFxs3D8atMbkwSfd7Ma2nWzdguZv7VfcRMIhyhmzkl2ObU8DSJZiNzoI5zsTNCO_gCYbFDaGEJTcoBgmMp7R24hRhIVc9DLgA4XWMI"/>
+</div>
+</div>
+</header>
+<div class="flex">
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="fixed left-0 top-0 h-full hidden lg:flex flex-col h-screen w-64 bg-[#0b1229] border-r border-white/5 pt-20 z-40">
+<div class="px-6 py-8">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">self_improvement</span>
+</div>
+<div>
+<h2 class="text-xl font-black text-[#b4ddd5] font-headline leading-tight">LuminaryMind</h2>
+<p class="text-xs text-slate-500">Student Wellness</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#141a32] hover:translate-x-1 duration-300 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-medium">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-[#141a32] to-[#222941] text-[#93cfeb] border-r-4 border-[#93cfeb] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-medium">Library</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#141a32] hover:translate-x-1 duration-300 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+<span class="font-medium">Meditations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#141a32] hover:translate-x-1 duration-300 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">podcasts</span>
+<span class="font-medium">Podcasts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:bg-[#141a32] hover:translate-x-1 duration-300 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6">
+<button class="w-full py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl text-sm transition-transform active:scale-95">
+                    Get Support Now
+                </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 lg:ml-64 p-6 md:p-10 pb-24">
+<div class="max-w-7xl mx-auto">
+<!-- Search & Filters -->
+<div class="mb-12 space-y-6">
+<h1 class="text-4xl md:text-5xl font-extrabold font-headline text-on-surface tracking-tight">Content Library</h1>
+<div class="flex flex-col md:flex-row gap-4 items-center">
+<!-- Search Bar -->
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-highest/40 border-b border-outline-variant/30 rounded-xl pl-12 pr-4 py-4 focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all text-on-surface placeholder-on-surface-variant/50" placeholder="Search sessions, articles, or guides..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container font-medium text-sm whitespace-nowrap">All Topics</button>
+<button class="px-5 py-2.5 rounded-full glass-panel border border-outline-variant/20 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all text-sm whitespace-nowrap">Stress Management</button>
+<button class="px-5 py-2.5 rounded-full glass-panel border border-outline-variant/20 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all text-sm whitespace-nowrap">Anxiety</button>
+<button class="px-5 py-2.5 rounded-full glass-panel border border-outline-variant/20 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all text-sm whitespace-nowrap">Focus</button>
+<button class="px-5 py-2.5 rounded-full glass-panel border border-outline-variant/20 text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all text-sm whitespace-nowrap">Sleep</button>
+</div>
+</div>
+</div>
+<!-- Content Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Featured Large Card -->
+<div class="md:col-span-2 xl:col-span-2 group relative rounded-2xl overflow-hidden glass-panel border border-outline-variant/10 hover:shadow-[0_0_40px_rgba(147,207,235,0.1)] transition-all">
+<div class="aspect-[16/9] md:aspect-auto md:h-full relative overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="tranquil dark mountain range at twilight with a soft blue and cyan nebula sky reflecting in a still lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFXjm21qWoPitLRHq6cdpTjnBQgK-BuCo2x_sUc0KFuTYnvxhmcqQr8MS0iMV3zjeYztnm_eu-B1GFCHjT9J7mTRQC6dUCr9Xi2M3VXfLXf0R3wYKul5RQZkraGvxr4VZrhO6VYnlPJFI34BHRMSp3n_kwOwJQYqP7LUaVW58NnKxU4x0KnAFhUxN6tiYXmtAIM2W6yUmeUxGE_giqpEO_Yflqix9S-q7NUAC4c9K1yOp9--7uYYmWBkzVncGa1DUWuG9bunUMh-KC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-3 max-w-2xl">
+<div class="flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                                    Featured Video
+                                </div>
+<h2 class="text-3xl font-bold font-headline leading-tight">Mastering Deep Focus in a Distracted World</h2>
+<p class="text-on-surface-variant text-lg">A comprehensive guide on neuroscience-backed techniques to reclaim your attention span and achieve flow states.</p>
+<div class="flex gap-4 pt-4">
+<button class="px-6 py-3 bg-primary text-on-primary font-bold rounded-xl flex items-center gap-2 hover:bg-primary-fixed-dim transition-colors">
+                                        Watch Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Card 1 -->
+<div class="group rounded-2xl overflow-hidden glass-panel border border-outline-variant/10 flex flex-col hover:shadow-[0_0_40px_rgba(147,207,235,0.1)] transition-all">
+<div class="h-48 overflow-hidden relative">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="aesthetic overhead shot of a clean workspace with a notebook, a plant, and soft morning light filtering through blinds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqMlCLs-Bn-S31NGfOtbYTddbdtRTFFocZABGEc26GD6umhAFTx6GZ69x2-e4ZSLYFguPanjUu81-eu7Qx9Ww5pUQOQoHBubuqtczSgPE6ykJSlFzEXwuJLb1MG3xeUAGfnC1Thaatz2AN7Zls9HfA833MhO_VA-Jb9zKCjI3P-aAHq3BjauZA9FHJJtZ8J-6Apd2YaijlhW3omInxvppuFvw3va5ciNGuKLsKiupDxxV04CHgYgC2sV8PTAmVSoNaHnW5W_Vtexvq"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md p-2 rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-xl">article</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">5-Minute Mindfulness for Finals</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3 mb-6">Quick and effective grounding techniques you can perform anywhere on campus during high-stress exam periods.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-outline font-medium">8 min read</span>
+<button class="text-secondary hover:underline font-bold text-sm">Read Article</button>
+</div>
+</div>
+</div>
+<!-- Bottom Cards -->
+<div class="group rounded-2xl overflow-hidden glass-panel border border-outline-variant/10 flex flex-col hover:shadow-[0_0_40px_rgba(147,207,235,0.1)] transition-all">
+<div class="h-48 overflow-hidden relative">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="a pair of premium headphones resting on a dark velvet surface with soft bioluminescent green accents glowing nearby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcAJbzuvxjO_OWnjoLC69K6O4r-4aNl06pxqN-yY6gpiwUUFV6T9raXacvuHY7fEm7Jk8tYC1r5F1CBlHBg1-J_MU-pj3KSSX4lMxM9lD_sP860d0MenRHoIOT53bhphn3xtm1TYTPxfhvPCKQmYPb7_o5sHeq9lqqyoNMqYDXjfyrDyn7hadI1huvkyLMNR8SymzEH7B4fB5IYeWWFzy04aNXTYjDn1GCG8Ixgg9Y2iKK6LiHmya4TV0cdi-Ct-OQA79sP3VhGdix"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md p-2 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-xl">podcasts</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">The Science of Sleep</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3 mb-6">Dr. Aris Thorne discusses how student lifestyles affect REM cycles and how to optimize your rest for better learning.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-outline font-medium">24 mins</span>
+<button class="text-secondary hover:underline font-bold text-sm">Listen Now</button>
+</div>
+</div>
+</div>
+<div class="group rounded-2xl overflow-hidden glass-panel border border-outline-variant/10 flex flex-col hover:shadow-[0_0_40px_rgba(147,207,235,0.1)] transition-all">
+<div class="h-48 overflow-hidden relative">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="abstract flowing silk-like textures in deep navy and sage green with subtle sparkling particles like stars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf6PNdziZxYsadm7axq-gbNQt090Mt9bOdglhEfvIpjLjcv5fG-f7rKnrffTfMSWiMuKFEXo88afFTkTxEZkMnWnbBdKUecux7_hV9eE1mZl2fxuzxZWSNRXLW5nTdR34nsUF_6ERHPjpP8c1X2sl-RxziqG07eohiGIrGj7kFB1jlnYZbNNjONCssJDgxXgWoSqMa7YTucGzaGP5pmIAGgXfGtNAa_RvS-4873hx3I29MPaQZB3nHxajln48aOkR-bfehQAIg6WxF"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-xl">self_improvement</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Digital Detox Guide</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3 mb-6">Step-by-step strategies to reduce screen time dependency and improve your real-world social connections.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-outline font-medium">Interactive Guide</span>
+<button class="text-secondary hover:underline font-bold text-sm">Start Guide</button>
+</div>
+</div>
+</div>
+<div class="group rounded-2xl overflow-hidden glass-panel border border-outline-variant/10 flex flex-col hover:shadow-[0_0_40px_rgba(147,207,235,0.1)] transition-all">
+<div class="h-48 overflow-hidden relative">
+<img class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="close-up of a healthy bowl of colorful ingredients on a dark slate background with dramatic top lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaFsQvtFTI4pifrTESO0WfU5FmexUwQioawK9e6k58bMTdxWS9lbYc-DXhI9-9Cb55wkV0OIS7bZqGfneQ8WrTWnJ_w3OupWuhE1G0Sn6BpxZYQx0uXDZpLFg2dWS8fOwZPn5fCUTo5A_fXQ3mak2hj9UJ5LiuFb6snOf4Xc50tAtrXK5f6-2KVIqesw9mAMD2l8B16twGqo3y17g4O7gFPPG_TF0i3zGtWjp9GU2uayunMAwEiCzSrjuEuR6jZ69NfD6UWKMNJ0_D"/>
+<div class="absolute top-4 right-4 bg-surface/80 backdrop-blur-md p-2 rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-xl">restaurant</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="text-xl font-bold font-headline mb-3 text-on-surface">Brain-Fuel Recipes</h3>
+<p class="text-on-surface-variant text-sm line-clamp-3 mb-6">Affordable and fast recipes specifically designed for students to maintain steady energy throughout the day.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="text-xs text-outline font-medium">12 recipes</span>
+<button class="text-secondary hover:underline font-bold text-sm">View Recipes</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Visible on Mobile Only) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 lg:hidden bg-[#0b1229]/80 backdrop-blur-2xl rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-[#93cfeb] transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-medium text-[10px] uppercase tracking-tighter">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-[#93cfeb] transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined">search</span>
+<span class="font-medium text-[10px] uppercase tracking-tighter">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#99c1b9]/20 text-[#b4ddd5] rounded-2xl px-5 py-2 active:scale-90 duration-150">
+<span class="material-symbols-outlined">local_library</span>
+<span class="font-medium text-[10px] uppercase tracking-tighter">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 hover:text-[#93cfeb] transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium text-[10px] uppercase tracking-tighter">Profile</span>
+</button>
+</footer>
+</body></html>
